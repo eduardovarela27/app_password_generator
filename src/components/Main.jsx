@@ -3,7 +3,9 @@ import '../styles/Main.css';
 
 const Main = () => {
     return (
-        <h1>Random Password Generator</h1>
+        <div className="container">
+            <h1>Random Password Generator</h1>
+        </div>
     );
 }
  
