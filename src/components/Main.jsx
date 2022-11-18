@@ -7,10 +7,10 @@ const Main = () => {
     return (
         <div className="container">
             <h1>Random Password Generator</h1>
-            <h2>Customize your password</h2>
+            <label>Customize your password</label>
             <form style={{"margin-top": "30px"}} >
                 <Row>
-                    <label >Customize your password</label>
+                    <label > Password Length: </label>
                     <div className="">
                         <BtnRange/>
                         <span>0</span>
