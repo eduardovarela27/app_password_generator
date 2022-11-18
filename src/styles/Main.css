@@ -12,3 +12,18 @@ body{
     background-color: #212139;
     color:#fff;
 }
+
+a{
+     color: #fff;
+     text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 500px;
+    width: 90%;
+    margin: 40px auto;
+}
