@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Main.css';
-import BtnRange from './Buttons/BtnRange';
+import {BtnRangePlus,BtnRangeMinus} from './Buttons/BtnRange';
+import Column from './Columns/Column';
 import Row from './Row/Row';
 
 const Main = () => {
@@ -11,11 +12,11 @@ const Main = () => {
             <form style={{"margin-top": "30px"}} >
                 <Row>
                     <label > Password Length: </label>
-                    <div className="">
-                        <BtnRange/>
+                    <Column>
+                        <BtnRangePlus/>
                         <span>0</span>
-                        <BtnRange/>
-                    </div>
+                        <BtnRangeMinus/>
+                    </Column>
                 </Row>
             </form>
         </div>
