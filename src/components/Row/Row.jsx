@@ -8,8 +8,10 @@ const Row = styled.div`
 
     label{
         line-height: 40px;
-        font-size: 18px;
+        font-size: 20px;
         margin-left:0px;
+        font-weight: bold;
+
     }
 `;
 
