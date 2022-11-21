@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Main.css';
-import {BtnRangePlus,BtnRangeMinus} from './Buttons/BtnRange';
+import BtnCheck from './Buttons/BtnCheck';
+import { BtnRangePlus, BtnRangeMinus } from './Buttons/BtnRange';
 import Column from './Columns/Column';
 import Row from './Row/Row';
 
@@ -9,14 +10,30 @@ const Main = () => {
         <div className="container">
             <h1>Random Password Generator</h1>
             <label>Customize your password</label>
-            <form style={{"margin-top": "30px"}} >
+            <form style={{ "margin-top": "30px" }} >
                 <Row>
                     <label > Password Length: </label>
                     <Column>
-                        <BtnRangePlus/>
+                        <BtnRangePlus />
                         <span>0</span>
-                        <BtnRangeMinus/>
+                        <BtnRangeMinus />
                     </Column>
+                </Row>
+                <Row>
+                    <label > Simbols: </label>
+                    <BtnCheck/>
+                </Row>
+                <Row>
+                    <label > Simbols: </label>
+                    <BtnCheck/>
+                </Row>
+                <Row>
+                    <label > Numbers: </label>
+                    <BtnCheck/>
+                </Row>
+                <Row>
+                    <label > Upper: </label>
+                    <BtnCheck/>
                 </Row>
             </form>
         </div>
