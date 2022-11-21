@@ -1,32 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: Source Sans Pro;
-   
+
 }
 
-body{
+body {
     background-color: #212139;
-    color:#fff;
+    color: #fff;
 }
 
-a{
-     color: #fff;
-     text-decoration: none;
-}
-
-a:hover{
+a {
+    color: #fff;
     text-decoration: none;
 }
 
-.container{
+a:hover {
+    text-decoration: none;
+}
+
+.container {
     max-width: 500px;
     width: 90%;
     margin: 40px auto;
+    
+   
+
+
+}
+
+.container .title {
+    width: 100%;
+    padding: 0;
     text-align: center;
-    justify-content: center;
 }
 

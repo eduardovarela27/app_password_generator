@@ -13,6 +13,8 @@ const Column = styled.div`
         line-height: 40px;
         background-color: #33257E;
     }
+
+     
 `;
 
 
