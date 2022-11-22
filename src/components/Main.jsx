@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Main.css';
 import Row from './Row/Row';
 import Column from './Columns/Column';
@@ -7,6 +7,12 @@ import { BtnRangePlus, BtnRangeMinus } from './Buttons/BtnRange';
 import { BtnGenerate } from './Buttons/BtnGenerate';
 
 const Main = () => {
+    const [length, setLength] = useState(0)
+    const handleIncremet = (e) => {
+        e.preventDefault();
+        setLength(length+1);
+        console.log(length);
+    }
     return (
         <div className="container">
             <div className="title">
@@ -17,8 +23,8 @@ const Main = () => {
                 <Row>
                     <label > Password Length: </label>
                     <Column>
-                        <BtnRangePlus />
-                        <span>0</span>
+                        <BtnRangePlus onClick={handleIncremet} />
+                        <span>{length}</span>
                         <BtnRangeMinus />
                     </Column>
                 </Row>
