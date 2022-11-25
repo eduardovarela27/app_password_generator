@@ -7,7 +7,7 @@ import { BtnGenerate } from './Buttons/BtnGenerate';
 import {ConfigState} from './ConfigState'
 
 const Main = () => {
-    const {state, handleIncremet} = ConfigState();
+    const {state, handleIncremet,handleDecremet,handleSimbols} = ConfigState();
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -25,12 +25,12 @@ const Main = () => {
                     <Column>
                         <BtnRangePlus click = {handleIncremet} />
                         <span>{state.length}</span>
-                        <BtnRangeMinus />
+                        <BtnRangeMinus click = {handleDecremet}/>
                     </Column>
                 </Row>
                 <Row>
                     <label > Simbols: </label>
-                    <BtnCheck />
+                    <BtnCheck click={handleSimbols} />
                 </Row>
 
                 <Row>

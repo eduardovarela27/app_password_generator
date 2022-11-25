@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-export const ConfigState = (id) => {
-    
+export const ConfigState = () => {
+
     const [state, setState] = useState({
         length: 6,
         simbols: true,
@@ -9,18 +9,40 @@ export const ConfigState = (id) => {
         upperCase: true
     });
 
-      
+
 
     const handleIncremet = () => {
         setState((oldState) => {
-            const newConfig = {...oldState};
-            newConfig.length +=1;
+            const newConfig = { ...oldState };
+            newConfig.length += 1;
             return newConfig
         });
+
+    }
+
+    const handleDecremet = () => {
+        setState((oldState) => {
+            const newConfig = { ...oldState };
+            if (newConfig.length > 5) {
+                newConfig.length -= 1;
+            }
+            return newConfig
+        });
+    }    
+
+   
+    const handleSimbols = () => {
+        setState((oldState) => {
+            const newConfig = { ...oldState };
+            newConfig.simbols = false;
+            console.log(newConfig);
+            return newConfig
+        });
+
     
     }
 
-    return {state, handleIncremet}
+    return { state, handleIncremet, handleDecremet,handleSimbols }
 
 }
 
