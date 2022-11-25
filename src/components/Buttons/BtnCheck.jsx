@@ -1,7 +1,7 @@
 import Btn from './Btn';
 
 const BtnCheck = () => {
-    
+
 
     return (
         <Btn>
