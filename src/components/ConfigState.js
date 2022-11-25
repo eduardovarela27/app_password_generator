@@ -12,7 +12,6 @@ export const ConfigState = (id) => {
       
 
     const handleIncremet = () => {
-        console.log("state.length");
         setState((oldState) => {
             const newConfig = {...oldState};
             newConfig.length +=1;
