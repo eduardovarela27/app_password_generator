@@ -35,14 +35,27 @@ export const ConfigState = () => {
         setState((oldState) => {
             const newConfig = { ...oldState };
             oldState.simbols === true ? newConfig.simbols = false : newConfig.simbols = true
-            console.log(newConfig)
             return newConfig
         });
-
-    
     }
 
-    return { state, handleIncremet, handleDecremet,handleSimbols }
+    const handleNumbers = () => {
+        setState((oldState) => {
+            const newConfig = { ...oldState };
+            oldState.numbers === true ? newConfig.numbers = false : newConfig.numbers = true
+            return newConfig
+        });
+    }
+
+    const handleUpper = () => {
+        setState((oldState) => {
+            const newConfig = { ...oldState };
+            oldState.upperCase === true ? newConfig.upperCase = false : newConfig.upperCase = true
+            return newConfig
+        });
+    }
+
+    return { state, handleIncremet, handleDecremet,handleSimbols, handleNumbers, handleUpper }
 
 }
 

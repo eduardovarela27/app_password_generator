@@ -7,7 +7,7 @@ import { BtnGenerate } from './Buttons/BtnGenerate';
 import {ConfigState} from './ConfigState'
 
 const Main = () => {
-    const {state, handleIncremet,handleDecremet,handleSimbols} = ConfigState();
+    const {state, handleIncremet,handleDecremet,handleSimbols, handleNumbers, handleUpper} = ConfigState();
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -35,11 +35,11 @@ const Main = () => {
 
                 <Row>
                     <label > Numbers: </label>
-                    <BtnCheck />
+                    <BtnCheck click={handleNumbers} check = {state.numbers}/>
                 </Row>
                 <Row>
                     <label > Uppercase: </label>
-                    <BtnCheck />
+                    <BtnCheck click={handleUpper} check = {state.upperCase} />
                 </Row>
                 <Row>
                     <BtnGenerate name="Generate" />
