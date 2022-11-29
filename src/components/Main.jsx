@@ -30,7 +30,7 @@ const Main = () => {
                 </Row>
                 <Row>
                     <label > Simbols: </label>
-                    <BtnCheck click={handleSimbols} />
+                    <BtnCheck click={handleSimbols} check = {state.simbols} />
                 </Row>
 
                 <Row>

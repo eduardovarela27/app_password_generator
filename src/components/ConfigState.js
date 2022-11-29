@@ -34,8 +34,8 @@ export const ConfigState = () => {
     const handleSimbols = () => {
         setState((oldState) => {
             const newConfig = { ...oldState };
-            newConfig.simbols = false;
-            console.log(newConfig);
+            oldState.simbols === true ? newConfig.simbols = false : newConfig.simbols = true
+            console.log(newConfig)
             return newConfig
         });
 
