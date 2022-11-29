@@ -34,7 +34,7 @@ export const ConfigState = () => {
     const handleSimbols = () => {
         setState((oldState) => {
             const newConfig = { ...oldState };
-            oldState.simbols === true ? newConfig.simbols = false : newConfig.simbols = true
+            newConfig.simbols = !newConfig.simbols
             return newConfig
         });
     }
@@ -42,15 +42,14 @@ export const ConfigState = () => {
     const handleNumbers = () => {
         setState((oldState) => {
             const newConfig = { ...oldState };
-            oldState.numbers === true ? newConfig.numbers = false : newConfig.numbers = true
-            return newConfig
+            newConfig.numbers = !newConfig.numbers
         });
     }
 
     const handleUpper = () => {
         setState((oldState) => {
             const newConfig = { ...oldState };
-            oldState.upperCase === true ? newConfig.upperCase = false : newConfig.upperCase = true
+            newConfig.upperCase = !newConfig.upperCase
             return newConfig
         });
     }
