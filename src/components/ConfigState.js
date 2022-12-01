@@ -43,6 +43,7 @@ export const ConfigState = () => {
         setState((oldState) => {
             const newConfig = { ...oldState };
             newConfig.numbers = !newConfig.numbers
+            return newConfig
         });
     }
 

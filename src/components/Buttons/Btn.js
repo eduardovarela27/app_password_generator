@@ -20,4 +20,12 @@ const Btn = styled.button`
     }
     `;
 
-    export default Btn;
+export const Btn_NotSelect = styled(Btn)`
+    background: #33257E;
+    &:hover {
+        background: #33257E;
+    }
+`;
+
+
+export default Btn;
