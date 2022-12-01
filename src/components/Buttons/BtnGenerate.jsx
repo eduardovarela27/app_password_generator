@@ -5,7 +5,7 @@ import Btn from './Btn';
 
 export const BtnGenerate = ({ name }) => {
     return (
-        <Btn>
+        <Btn type='submit'>
             <Column>
                 <p>{name } </p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-lock-fill" viewBox="0 0 16 16">

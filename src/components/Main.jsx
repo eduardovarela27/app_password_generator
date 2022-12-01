@@ -5,12 +5,20 @@ import BtnCheck from './Buttons/BtnCheck';
 import { BtnRangePlus, BtnRangeMinus } from './Buttons/BtnRange';
 import { BtnGenerate } from './Buttons/BtnGenerate';
 import {ConfigState} from './ConfigState'
+import { useEffect, useState } from 'react';
+import generatePassword from './helpers/generatePassword';
 
 const Main = () => {
     const {state, handleIncremet,handleDecremet,handleSimbols, handleNumbers, handleUpper} = ConfigState();
+    const [password, setPassword] = useState();
+
+    useEffect(()=>{
+        setPassword(generatePassword(state));
+    },[state]);
     
     const handleSubmit = (e) => {
         e.preventDefault();
+        setPassword(generatePassword(state));
     }
     
     return (
@@ -19,7 +27,7 @@ const Main = () => {
                 <h1>Random Password Generator</h1>
                 <label>Customize your password</label>
             </div>
-            <form onSubmit={handleSubmit} style={{ "margin-top": "30px" }} >
+            <form onSubmit={handleSubmit} style={{ marginTop: "30px" }} >
                 <Row>
                     <label > Password Length: </label>
                     <Column>
@@ -43,7 +51,7 @@ const Main = () => {
                 </Row>
                 <Row>
                     <BtnGenerate name="Generate" />
-                    <input type="text" />
+                    <input type="text" readOnly={true} value={password}/>
                 </Row>
             </form>
         </div>

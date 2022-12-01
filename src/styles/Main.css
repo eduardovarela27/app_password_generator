@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 
 * {
     box-sizing: border-box;
@@ -32,9 +34,47 @@ a:hover {
 
 }
 
-.container .title {
+.container > .title {
     width: 100%;
     padding: 0;
     text-align: center;
 }
+
+.title label{
+    font-family: 'Nerko One', cursive;
+    font-size: larger;
+   
+}
+
+h1{
+    font-family: 'Nerko One', cursive;
+    
+}
+
+input {
+    width: 100%;
+	background: none;
+	border-radius: 4px;
+	border: 1px solid rgba(255,255,255, .25);
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+	transition: all .3s ease;
+    text-align: center;
+    font-family: 'Noto Sans JP';
+    font-weight: bold;
+    font-size: 18px;
+	
+}
+
+input:hover {
+    border: 1px solid rgba(255,255,255, .50);
+}
+input::selection {
+    background: #212139;
+}
+input::-moz-selection {
+    background: #212139;
+} 
 
