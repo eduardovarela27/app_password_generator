@@ -14,5 +14,4 @@ export const BtnCopy = () => {
 
 const BtnC = styled(Btn)`
     background: none;
-    
 `;

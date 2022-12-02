@@ -6,7 +6,7 @@ const RowPass = styled.div`
     grid-auto-flow: column;
     grid-auto-columns: 20fr 1fr 1fr ;
     gap: 10px;
-    border: 1px solid rgba(255,255,255, .25);
+    border-bottom: 4px solid rgba(255,255,255, .25);
    
 `;
 
