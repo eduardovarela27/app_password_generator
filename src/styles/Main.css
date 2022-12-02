@@ -10,6 +10,8 @@
 
 }
 
+
+
 body {
     background-color: #212139;
     color: #fff;
@@ -54,8 +56,9 @@ h1{
 input {
     width: 100%;
 	background: none;
-	border-radius: 4px;
-	border: 1px solid rgba(255,255,255, .25);
+    border: 0;
+	/* border-radius: 4px; */
+	/* border: 1px solid rgba(255,255,255, .25); */
 	color: #fff;
 	height: 40px;
 	line-height: 40px;

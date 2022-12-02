@@ -4,23 +4,25 @@ import Column from './Columns/Column';
 import BtnCheck from './Buttons/BtnCheck';
 import { BtnRangePlus, BtnRangeMinus } from './Buttons/BtnRange';
 import { BtnGenerate } from './Buttons/BtnGenerate';
-import {ConfigState} from './ConfigState'
+import { ConfigState } from './ConfigState'
 import { useEffect, useState } from 'react';
 import generatePassword from './helpers/generatePassword';
+import { BtnCopy } from './Buttons/BtnCopy';
+import RowPass from './Row/RowPass';
 
 const Main = () => {
-    const {state, handleIncremet,handleDecremet,handleSimbols, handleNumbers, handleUpper} = ConfigState();
+    const { state, handleIncremet, handleDecremet, handleSimbols, handleNumbers, handleUpper } = ConfigState();
     const [password, setPassword] = useState();
 
-    useEffect(()=>{
+    useEffect(() => {
         setPassword(generatePassword(state));
-    },[state]);
-    
+    }, [state]);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setPassword(generatePassword(state));
     }
-    
+
     return (
         <div className="container">
             <div className="title">
@@ -31,28 +33,29 @@ const Main = () => {
                 <Row>
                     <label > Password Length: </label>
                     <Column>
-                        <BtnRangePlus click = {handleIncremet} />
+                        <BtnRangePlus click={handleIncremet} />
                         <span>{state.length}</span>
-                        <BtnRangeMinus click = {handleDecremet}/>
+                        <BtnRangeMinus click={handleDecremet} />
                     </Column>
                 </Row>
                 <Row>
                     <label > Simbols: </label>
-                    <BtnCheck click={handleSimbols} check = {state.simbols} />
+                    <BtnCheck click={handleSimbols} check={state.simbols} />
                 </Row>
 
                 <Row>
                     <label > Numbers: </label>
-                    <BtnCheck click={handleNumbers} check = {state.numbers}/>
+                    <BtnCheck click={handleNumbers} check={state.numbers} />
                 </Row>
                 <Row>
                     <label > Uppercase: </label>
-                    <BtnCheck click={handleUpper} check = {state.upperCase} />
+                    <BtnCheck click={handleUpper} check={state.upperCase} />
                 </Row>
-                <Row>
-                    <BtnGenerate name="Generate" />
-                    <input type="text" readOnly={true} value={password}/>
-                </Row>
+                <RowPass>
+                     <input type="text" readOnly={true} value={password} />
+                     <BtnGenerate name="Generate" />
+                    <BtnCopy/>
+                </RowPass>
             </form>
         </div>
     );
