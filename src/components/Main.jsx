@@ -12,7 +12,7 @@ import RowPass from './Row/RowPass';
 
 const Main = () => {
     const { state, handleIncremet, handleDecremet, handleSimbols, handleNumbers, handleUpper } = ConfigState();
-    const [password, setPassword] = useState();
+    const [password, setPassword] = useState(generatePassword(state));
 
     useEffect(() => {
         setPassword(generatePassword(state));
@@ -53,8 +53,8 @@ const Main = () => {
                 </Row>
                 <RowPass>
                      <input type="text" readOnly={true} value={password} />
-                     <BtnGenerate name="Generate" />
-                    <BtnCopy/>
+                     <BtnGenerate />
+                    <BtnCopy password={password}/>
                 </RowPass>
             </form>
         </div>
