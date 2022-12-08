@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Btn = styled.button`
     width: 100%;
-    background: #684BFF;
+    background: #3F8AFC;
     color: #fff;
     display: inline-flex;
     align-items: center;
