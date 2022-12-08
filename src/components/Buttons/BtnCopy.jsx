@@ -4,12 +4,26 @@ import styled from "styled-components";
 export const BtnCopy = ({password}) => {
     const handleCopy = (e) => {
         e.preventDefault();
+
+        //create a hidden text field
         let inp = document.createElement("input");
+        //assings the element content to input
         inp.setAttribute("value",password);
+        //add element to body
         document.body.appendChild(inp);
+        //select the element from body
         inp.select();
+        //execute command
         document.execCommand("copy");
+        //remove element
         inp.remove();
+        
+        let msg= document.getElementById("msg_copied");
+        msg.removeAttribute("style");
+
+        setTimeout(() => {
+            msg.style.display="none"
+        }, 1000);
     }
     return (
         <BtnC onClick={handleCopy}>

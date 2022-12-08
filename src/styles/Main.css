@@ -62,22 +62,23 @@ input {
 	color: #fff;
 	height: 40px;
 	line-height: 40px;
-	cursor: pointer;
-	transition: all .3s ease;
+	/* cursor: pointer; */
+	/* transition: all .3s ease; */
     text-align: center;
     font-family: 'Noto Sans JP';
     font-weight: bold;
     font-size: 18px;
+    outline: none;
 	
 }
 
-input:hover {
-    border: 1px solid rgba(255,255,255, .50);
+#msg_copied{
+    background-color: green;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #33257E;
+    opacity: .5;
+    
 }
-input::selection {
-    background: #212139;
-}
-input::-moz-selection {
-    background: #212139;
-} 
-

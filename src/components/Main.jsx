@@ -52,10 +52,15 @@ const Main = () => {
                     <BtnCheck click={handleUpper} check={state.upperCase} />
                 </Row>
                 <RowPass>
-                     <input type="text" readOnly={true} value={password} />
-                     <BtnGenerate />
-                    <BtnCopy password={password}/>
+                    <input type="text" readOnly={true} value={password} />
+                    <BtnGenerate />
+                    <BtnCopy password={password} />
                 </RowPass>
+
+                <div id="msg_copied" style={{display:'none'}}>
+                    <span>Copied!</span>
+                </div>
+
             </form>
         </div>
     );

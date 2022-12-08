@@ -8,6 +8,7 @@ const RowPass = styled.div`
     gap: 10px;
     border-bottom: 4px solid rgba(255,255,255, .25);
    
+   
 `;
 
 export default RowPass;
