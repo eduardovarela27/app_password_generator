@@ -12,11 +12,12 @@ import RowPass from './Row/RowPass';
 
 const Main = () => {
     const { state, handleIncremet, handleDecremet, handleSimbols, handleNumbers, handleUpper } = ConfigState();
-    const [password, setPassword] = useState(generatePassword(state));
+    const [password, setPassword] = useState('');
 
     useEffect(() => {
         setPassword(generatePassword(state));
     }, [state]);
+
 
     const handleSubmit = (e) => {
         e.preventDefault();

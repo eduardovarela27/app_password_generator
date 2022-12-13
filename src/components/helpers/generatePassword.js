@@ -26,8 +26,8 @@ const generatePassword = (config) => {
         password += SelectedCharacters[Math.floor(Math.random() * SelectedCharacters.length)];
     }
 
-    verificatePassword(password);
-
+    let p = password;
+    verificatePassword(p);
     return password;
     
 
