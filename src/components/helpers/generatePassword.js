@@ -1,3 +1,5 @@
+import { verificatePassword } from "./verificatePassword";
+
 const generatePassword = (config) => {
     const options = {
         numbers: "0 1 2 3 4 5 6 7 8 9",
@@ -14,7 +16,7 @@ const generatePassword = (config) => {
             SelectedCharacters += options[opt] + ' ';
         }
     }
-  
+
     SelectedCharacters += options.lowercase;
     SelectedCharacters.trim()
     SelectedCharacters = SelectedCharacters.split(' ');
@@ -23,6 +25,9 @@ const generatePassword = (config) => {
     for(let i =1; i <= config.length; i++){
         password += SelectedCharacters[Math.floor(Math.random() * SelectedCharacters.length)];
     }
+
+    verificatePassword(password);
+
     return password;
     
 
